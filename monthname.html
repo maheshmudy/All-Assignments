@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: aqua;
+        }
+        table {
+            padding: 25px;
+            font-size: larger;
+        }
+        input 
+        {
+            height: 20px;
+            border: 1.5px solid;
+        }
+        button 
+        {
+            color: white;
+            background-color: black;
+            height: 35px;
+            border-radius: 7px;
+            font-size: medium;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>month-name</title>
+</head>
+<body align="center">
+    <h1>Program To Find  Month-Name</h1>
+        <div>
+            <table align="center">
+                <tr>
+                    <td>
+                        <label for="mnumber"><b>Enter the Month-Number :</b></label>
+                    </td>
+                    <td>
+                        <input type="number" id="mnumber" >
+                    </td>
+                </tr>
+            </table>
+            <button onclick="mname()"><b>Find the Month-Name </b></button>
+            <table align="center">
+                <tr>
+                    <td><label for="mname"><b>The Month-Name is:</b></label></td>
+                    <td> <input type="text"  id="mname"></td>
+                </tr>
+            </table>
+        </div>
+        <script type="text/javascript">
+            function mname()
+            {  
+                var n=document.getElementById("mnumber").value;
+                n=parseFloat(n)
+                switch(n)
+                {
+                    case 1:document.getElementById("mname").value="January";break;
+                    case 2:document.getElementById("mname").value="February";break;
+                    case 3:document.getElementById("mname").value="March";break;
+                    case 4:document.getElementById("mname").value="April";break;
+                    case 5:document.getElementById("mname").value="May";break;
+                    case 6:document.getElementById("mname").value="June";break;
+                    case 7:document.getElementById("mname").value="July";break;
+                    case 8:document.getElementById("mname").value="August";break;
+                    case 9:document.getElementById("mname").value="Setember";break;
+                    case 10:document.getElementById("mname").value="October";break;
+                    case 11:document.getElementById("mname").value="Nuvember";break;
+                    case 12:document.getElementById("mname").value="December";break;
+                    default:document.getElementById("mname").value="Wrong Input";break;
+                }  
+            }
+        </script>
+</body>
+</html>
+  
+
+    

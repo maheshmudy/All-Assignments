@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: aqua;
+        }
+        table {
+            padding: 25px;
+        }
+        input 
+        {
+            height: 20px;
+        }
+        button 
+        {
+            color: white;
+            background-color: black;
+            height: 30px;
+            border-radius: 7px;
+            font-size: medium;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body align="center">
+    <h2>Program To Find Factorial Of A Number</h2>
+        <table align="center">
+            <tr>
+                <td>
+                    <label for="num"><b>Enter the Number</b></label>
+                </td>
+                <td>
+                    <input type="number" id="num">
+                </td>
+            </tr>
+        </table>
+        <button onclick="fact()">Find Factorial</button>
+        <table align="center">
+            <tr>
+                <td><label for="result"><b>Factorial Is</b></label></td>
+                <td><input type="text" id="result" placeholder="Result Will Print Here"></td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+            function fact()
+             {
+                var n=document.getElementById("num").value;
+                n=parseInt(n)
+                var fact=1;
+                for(var i=1;i<=n;i=i+1)
+                {
+                fact=fact*i;  
+                 }
+            document.getElementById("result").value=fact;
+            }
+        </script>
+
+    
+</body>
+</html>

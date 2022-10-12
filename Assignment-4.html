@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .extend {
+            width: 100%;
+            height: 22px;
+        }
+        textarea {
+            width: 100%;
+        }
+        body {
+            background-color: rgb(151, 247, 232);
+            padding: 25px;
+        }
+        .color {
+            background-color: rgb(6, 170, 47);
+            border-style: none;
+            color: white;
+            height: 30px;
+        }
+    </style>
+    <link rel="icon" type="image/x-icon" href="favicon.png" >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <h2 align="center">Student Registration Form</h2><hr>
+    <form action="/action_page.php" method="post">
+
+        <label for="firstname">First-Name :</label><br>
+        <input type="text" id="firstname"  name="firstname" class="extend" placeholder="First Name"></td><br><br>
+           
+        <label for="middlename">Middle-Name:</label><br>
+        <input type="text" name="middlename" id="middlename" class="extend" placeholder="Middle Name"><br><br>
+            
+        
+        <label for="lastname">Last-Name:</label><br>
+        <input type="text"  name="lastname" id="lastname"class="extend" placeholder="Last Name"><br><br>
+
+        <label for="course">Course:</label>
+        <select id="course" name="course" >
+            <option>choose</option>
+            <option value="+2">+2</option>
+            <option value="degree">Degree</option>
+            <option value="diploma">Diploma</option>
+            <option value="ita">Ita</option>
+        </select><br><br>
+
+        <label>Gender</label>
+        <input type="radio" name="gender" id="male" value="male"><label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female"><label for="female">female</label>
+        <input type="radio" name="gender" id="other" value="other"><label for="other">other</label><br><br>
+        
+        <label for="Phoneno">Phone no:</label><br>
+        <input type="number text" value="+91" class="extend"><br><br>
+        <input type="number"  placeholder="Phone no" class="extend" name="Phoneno" id="Phoneno"><br><br>
+        
+        <label for="address">Current Addres:</label><br>
+        <textarea id="address" name="address" rows="5" cols="100%" placeholder="write address"></textarea></td>
+    
+        <label for="email">Email</label><br>
+        <input  class="extend" type="email" name="email" id="email" placeholder="Enter Email"><br><br>
+
+        <label for="password">Password</label><br><br>
+        <input  class="extend" type="password" name="password" id="password" placeholder="Enter Password"><br>
+        
+        <label for="repassword">Re-type Password</label><br><br>
+        <input class="extend" type="password" placeholder="Retype Password" name="repassword" id="repassword"><br><br>
+        
+        
+        <input class="extend color" type="submit"  name="submitted" value="Register" >
+       
+    </form >      
+        
+        
+
+  
+ 
+</body>
+</html>

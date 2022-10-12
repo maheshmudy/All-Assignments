@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: aqua;
+        }
+        table {
+            padding: 25px;
+        }
+        input 
+        {
+            height: 20px;
+        }
+        button 
+        {
+            color: white;
+            background-color: black;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biggest of 3 numbers</title>
+</head>
+<body align="center">
+    <h2>Program-2 To Find Biggest Of Three Numbers (Using Ternary-Operator)</h1>
+        <table align="center">
+            <tr>
+                <td>
+                    <p><b><label for="fn">Enter the first number</label></b></p>
+                </td>
+                <td>
+                    <input type="number" id="fn">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><b><label for="sn">Enter the second number</label></b></p>
+                </td>
+                <td>
+                    <input type="number" id="sn">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><b><label for="tn">Enter the third number</label></b></p>
+                </td>
+                <td>
+                    <input type="number" id="tn">
+                </td>
+            </tr>
+           
+        </table>
+        <table align="center">
+            <tr>
+                <td><button type="button" onclick="big()"><b>Find The Biggest Number</b></button></td>
+            </tr>
+            <tr>
+                <td><h4 id="result">Reuslt Will Print Here</h4></td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+            function big()
+            {
+                var n1=document.getElementById("fn").value;
+                var n2=document.getElementById("sn").value;
+                var n3=document.getElementById("tn").value;
+                n1 = parseFloat(n1);
+                n2 = parseFloat(n2);
+                n3 = parseFloat(n3);
+                var big=(n1>n2) ? n1 :n2;
+                var big=(big>n3) ? big :n3;
+               
+                document.getElementById("result").innerHTML="Biggest Number Is :"+big;
+                
+            }  
+        </script>
+
+    
+</body>
+</html>

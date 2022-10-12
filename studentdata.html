@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div {
+            background-color: aqua;
+            padding: 20px;
+        }
+        .btn {
+            color: white;
+            background-color: rgb(34, 33, 30);
+            border-radius: 8px;
+            height: 30px;
+            width: 100px;
+        }
+        p {
+            color: red;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student-data</title>
+</head>
+<body>
+    <h1>Reading data from textboxes</h1>
+    <div>
+        <form >
+            <label for="name">Enter First Name :</label><br>
+            <input type="text" id="name" ><br><br>
+            <p hidden id="para">First Name cannot be empty</p>
+            <label for="age">Enter Age</label><br>
+            <input type="number" id="age"><br><br>
+            <label for="dom"> Enter Date of Birth</label><br>
+            <input  type="date" id="dom"><br><br>
+            <button onclick="process()" type="button"  class="btn">save student</button>
+            <input  onclick="submit1()" type="submit" value="post Student" class="btn">
+            <input  onclick="reset1()" type="reset" value="Reset Form"  class="btn">
+        </form>
+    </div>
+    <script type="text/javascript">
+    
+        function process()
+        {
+            var name=document.getElementById("name").value;
+            var age=document.getElementById("age").value;
+            var dom=document.getElementById("dom").value;
+            if(name=="")
+            {
+                alert("First Name Should not be empty");
+                document.getElementById("para").style.display="block";
+            }
+            else
+            {
+                document.getElementById("para").style.display="none"; 
+            }
+            if(age=="")
+            {
+                alert("Age Should not be empty");
+            }
+            if(dom=="")
+            {
+                alert("Date of Birth Should not be empty");
+            }
+        }
+        function submit1()
+        { 
+             document.getElementById("para").style.display="block";
+            var name=document.getElementById("name").value;
+            var age=document.getElementById("age").value;
+            var dom=document.getElementById("dom").value;
+            if((name&&age&&dom)!="")
+            {
+                alert("Form data is accepted ");
+            } 
+        }
+        function reset1()
+        {
+            document.getElementById("para").style.display="none"; 
+        }
+    </script>
+    
+</body>
+</html>

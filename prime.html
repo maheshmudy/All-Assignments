@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: aqua;
+        }
+        table {
+            padding: 10px;
+        }
+        td{
+            padding: 8px;
+        }
+        input 
+        {
+            height: 20px;
+        }
+        button 
+        {
+            color: white;
+            background-color: black;
+            height: 30px;
+            border-radius: 7px;
+            font-size: medium;
+            width: 150px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime-number</title>
+</head>
+<body align="center">
+    <h2>Check  Number Is Prime Or Not</h3>
+    <div>
+        <table align="center">
+            <tr>
+                <td>
+                    <label for="num"><b>Enter the Number</b></label>
+                </td>
+                <td>
+                    <input type="number" id="num">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <button  type="button" onclick="prime()"><b>Check</b></button>
+        <br><br>
+        <table align="center">
+            <tr>
+                <td><label for="result"><b>Result Is</b></label></td>
+                <td><input type="text" id="result" placeholder="Result Will Print Here"></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function prime()
+        {
+            var n=document.getElementById("num").value;
+            n=parseInt(n);
+            switch(n)
+                {
+                    case 1 : document.getElementById("result").value=" not prime";break;
+                    case 2 : document.getElementById("result").value=" prime";break;
+                    default:for(let i=2;i<n;i=i+1)
+                {
+                  if(n%i==0)
+                  {
+                    document.getElementById("result").value=" Not Prime-Number";
+                    break;
+                  }
+                   else 
+                    {
+                    document.getElementById("result").value="Prime-Number";
+                    break;
+                   }
+                } 
+                break; 
+                }
+                
+            }
+        </script>
+</body>
+</html>
+    
+    
+    
+    

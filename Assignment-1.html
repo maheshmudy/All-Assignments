@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        td{
+            padding: 20px;
+        }
+        .topdiv {
+            width:50%;
+            height: 135px;
+            float: left;
+           }
+    </style>
+    <link rel="icon" type="image/x-icon" href="favicon.png" >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+</head>
+<body>
+    <div class="topdiv">
+        <h1>Forms</h1>
+        <h2>Create an Account</h2>
+    </div>
+    <div class="topdiv" >
+        <p align="right"><b>Date:<input type="date"></b></p>
+    </div>
+    <hr>    
+    <p>All  the informations need to fill</p>
+    <form action="/action_page.php" method="post">
+        <table>
+            <tr>
+                <td><label for="username">Usre Name</label></td>
+                <td> <input type="text" id="username"  name="username" placeholder="your name"></td>
+            </tr>
+        
+            <tr>
+                <td><label for="password">Password</label></td>
+                <td><input type="password" name="password" id="password"></td>
+            </tr>
+        
+            <tr>
+                <td><label for="repassword">Retype-Password</label></td>
+                <td><input type="password"  name="repassword" id="repassword"></td>
+            </tr>
+        
+            <tr>
+                <td> <label for="fname">First Name</label></td>
+                <td><input type="text" name="fname" id="fname"></td>
+            </tr>
+        
+            <tr>
+                <td> <label for="lname">Last Name</label></td>
+                <td><input type="text" name="lname" id="lname"></td>
+            </tr>
+        
+            <tr>
+                <td><label for="address">Address</label></td>
+                <td><textarea  name="address" id="address" placeholder="write your address"></textarea></td>
+            </tr>
+        
+            <tr>
+                <td> <input type="submit"  name="submitted" value="Submit"></td>
+                <td><input type="reset" name="reset" value="Reset"></td>
+            </tr>
+        
+        </table>
+    </form>  
+</body>
+</html>

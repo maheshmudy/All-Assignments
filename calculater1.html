@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+#display{
+    width: 100%;
+    pointer-events: none;
+}
+.btn{
+    width: 70px;
+    height: 70px;
+    border-color: green;
+    background-color: aqua;
+    border-radius: 8px;
+    font-size: medium;
+}  
+#display {
+    border-color: rgb(239, 13, 13) ;
+    width: 280px;
+    height: 70px;
+    font-size: xx-large;
+}
+#zero
+{
+    width: 140px;
+}
+#clear{
+    width: 210px;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body align="center">
+        <h1>Calculator</h1>
+        <table align="center">
+            <tr>
+                <td colspan="4">
+                    <input type="text" id="display">
+                </td>
+            </tr>
+            <tr >
+                <td colspan="3">
+                    <button id="clear" onclick="displayClear()" class="btn"><b>clear</b></button>
+                </td>
+                <td>
+                    <button onclick="bclick('+')"class="btn"><b>+</b></button>
+
+                </td>
+            </tr>
+            <tr>
+                <td><button onclick="bclick(7)" class="btn"><b>7</b></button></td>
+                <td><button onclick="bclick(8)" class="btn"><b>8</b></button></td>
+                <td><button onclick="bclick(9)" class="btn"><b>9</b></button></td>
+                <td> <button onclick="bclick('/')" class="btn"><b>/</b></button></td>
+             </tr>
+             <tr>
+                <td> <button onclick="bclick(4)" class="btn"><b>4</b></button></td>
+                <td> <button onclick="bclick(5)" class="btn"><b>5</b></button></td>
+                <td><button onclick="bclick(6)" class="btn"><b>6</b></button></td>
+                <td><button onclick="bclick('*')"class="btn"><b>*</b></button></td>
+             </tr>
+             <tr>
+                <td><button onclick="bclick(1)" class="btn"><b>1</b></button></td>
+                <td><button onclick="bclick(2)" class="btn"><b>2</b></button></td>
+                <td><button onclick="bclick(3)" class="btn"><b>3</b></button></td>
+                <td> <button onclick="bclick('-')"class="btn"><b>-</b></button></td>
+             </tr>
+             <tr >
+                <td colspan="2"><button  id="zero" onclick="bclick(0)" class="btn"><b>0</b></button></td>
+                <td> <button onclick="bclick('.')"class="btn"><b>.</b></button></td>
+                <td><button onclick="eclick('=')"class="btn"><b>=</b></button> </td>
+             </tr>
+
+        </table>
+    <script>
+        function bclick (val)
+        {
+            document.getElementById("display").value+=val;
+        }
+        function displayClear()
+        {
+            document.getElementById("display").value="";
+        }
+        function eclick()
+        {
+            var text=document.getElementById("display").value ;
+            var result=eval(text);
+            document.getElementById("display").value=result;
+        }
+    </script>
+    
+</body>
+</html>
